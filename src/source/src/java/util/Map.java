@@ -136,6 +136,7 @@ public interface Map<K,V> {
      *
      * @return the number of key-value mappings in this map
      */
+    // 返回key-value键值对
     int size();
 
     /**
@@ -143,6 +144,7 @@ public interface Map<K,V> {
      *
      * @return <tt>true</tt> if this map contains no key-value mappings
      */
+    // 键值对是否为 空
     boolean isEmpty();
 
     /**
@@ -162,6 +164,7 @@ public interface Map<K,V> {
      *         does not permit null keys
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
+    // 是否包含某个键
     boolean containsKey(Object key);
 
     /**
@@ -209,6 +212,7 @@ public interface Map<K,V> {
      *         does not permit null keys
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
+    // 根据 key 得到值
     V get(Object key);
 
     // Modification Operations
@@ -237,6 +241,8 @@ public interface Map<K,V> {
      * @throws IllegalArgumentException if some property of the specified key
      *         or value prevents it from being stored in this map
      */
+
+    // 若key存在的话，新值替换旧值
     V put(K key, V value);
 
     /**
@@ -269,6 +275,8 @@ public interface Map<K,V> {
      *         map does not permit null keys
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
+
+    // 移除指定的 key值，并且返回之前的旧值
     V remove(Object key);
 
 
@@ -293,6 +301,7 @@ public interface Map<K,V> {
      * @throws IllegalArgumentException if some property of a key or value in
      *         the specified map prevents it from being stored in this map
      */
+    // 把一个map的值放进去。
     void putAll(Map<? extends K, ? extends V> m);
 
     /**
@@ -302,6 +311,7 @@ public interface Map<K,V> {
      * @throws UnsupportedOperationException if the <tt>clear</tt> operation
      *         is not supported by this map
      */
+    // 移除所有的key-value对
     void clear();
 
 
